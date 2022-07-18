@@ -1,5 +1,6 @@
 .vs/
-SIDISTraceChecker/SIDISTraceChecker.csproj.user
-SIDISTraceChecker/bin/
-SIDISTraceChecker/obj/
 SIDISRuntimeLogger/SIDISRuntimeLogger.csproj.user
+SIDISRuntimeLogger/bin/
+SIDISRuntimeLogger/obj/
+SIDISRuntimeLogger/Properties/
+

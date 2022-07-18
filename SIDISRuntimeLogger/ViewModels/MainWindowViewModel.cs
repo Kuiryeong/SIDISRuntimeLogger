@@ -134,13 +134,14 @@ namespace SIDISRuntimeLogger.ViewModels
         {
             try
             {
-                if (!string.IsNullOrEmpty(FileNameToSave) || LogPackageModels?.Count < 1)
+                if (!string.IsNullOrEmpty(FileNameToSave) && LogPackageModels?.Count > 1)
                 {
                 
                     using (StreamWriter streamWriter = new StreamWriter(FileNameToSave, true))
                     {
-                        foreach (LogPacketModel model in LogPackageModels)
+                        for (int i = LogPackageModels.Count - 1; i > 0; i--)
                         {
+                            LogPacketModel model = LogPackageModels[i];
                             streamWriter.WriteLineAsync($"{model.ReceivedTime} {model.CSTName} {model.LogString}");
                         }
                     }
